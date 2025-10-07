@@ -174,7 +174,9 @@ const ReportPreview = ({
     
     const cellStyle = {
       border: '1px solid #000',
-      padding: '10pt'
+      padding: '12pt 10pt',
+      minHeight: '40pt',
+      verticalAlign: 'top'
     };
     
     return (
@@ -195,36 +197,36 @@ const ReportPreview = ({
             <table style={tableStyle}>
               <tbody>
                 <tr>
-                  <td style={{ ...cellStyle, width: '48px' }}>i</td>
-                  <td style={{ ...cellStyle, fontWeight: 'bold' }}>Survey No</td>
-                  <td style={cellStyle}>{doc.surveyNo || '(Survey No)'}</td>
+                  <td style={{ ...cellStyle, width: '48px', padding: '14pt 10pt' }}>i</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', padding: '14pt 10pt' }}>Survey No</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>{doc.surveyNo || '(Survey No)'}</td>
                 </tr>
                 <tr>
-                  <td style={cellStyle}>ii</td>
-                  <td style={{ ...cellStyle, fontWeight: 'bold' }}>As per Revenue Record</td>
-                  <td style={cellStyle}>{doc.asPerRevenueRecord || '(As per Revenue Record)'}</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>ii</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', padding: '14pt 10pt' }}>As per Revenue Record</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>{doc.asPerRevenueRecord || '(As per Revenue Record)'}</td>
                 </tr>
                 <tr>
-                  <td style={cellStyle}>iii</td>
-                  <td style={{ ...cellStyle, fontWeight: 'bold' }}>Total Extent</td>
-                  <td style={cellStyle}>{doc.totalExtent || '(Total Extent)'}</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>iii</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', padding: '14pt 10pt' }}>Total Extent</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>{doc.totalExtent || '(Total Extent)'}</td>
                 </tr>
                 <tr>
-                  <td style={cellStyle}>iv</td>
-                  <td style={{ ...cellStyle, fontWeight: 'bold' }}>Plot No</td>
-                  <td style={cellStyle}>{doc.plotNo || '(Plot No)'}</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>iv</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', padding: '14pt 10pt' }}>Plot No</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>{doc.plotNo || '(Plot No)'}</td>
                 </tr>
                 <tr>
-                  <td style={cellStyle}>v</td>
-                  <td style={{ ...cellStyle, fontWeight: 'bold' }}>Location like name of the place, village, city, registration, sub-district etc.</td>
-                  <td style={cellStyle}>{doc.location || '(Location like name of the place, village, city registration, sub-district etc.)'}</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>v</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', padding: '14pt 10pt' }}>Location like name of the place, village, city, registration, sub-district etc.</td>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }}>{doc.location || '(Location like name of the place, village, city registration, sub-district etc.)'}</td>
                 </tr>
                 <tr>
-                  <td style={{ ...cellStyle, padding: '12pt' }} colSpan={3}>
-                    <div style={{ fontWeight: 'bold', marginBottom: '8pt' }}>i) Boundaries for {doc.totalExtentSqFt || '(Total Extent)'} Sq.Ft of land</div>
-                    <div style={{ marginTop: '6pt', marginBottom: '4pt' }}><strong>North By</strong> - {doc.northBy || '(North By)'}</div>
-                    <div style={{ marginBottom: '4pt' }}><strong>South By</strong> - {doc.southBy || '(South By)'}</div>
-                    <div style={{ marginBottom: '4pt' }}><strong>East By</strong> - {doc.eastBy || '(East By)'}</div>
+                  <td style={{ ...cellStyle, padding: '14pt 10pt' }} colSpan={3}>
+                    <div style={{ fontWeight: 'bold', marginBottom: '10pt' }}>i) Boundaries for {doc.totalExtentSqFt || '(Total Extent)'} Sq.Ft of land</div>
+                    <div style={{ marginBottom: '6pt' }}><strong>North By</strong> - {doc.northBy || '(North By)'}</div>
+                    <div style={{ marginBottom: '6pt' }}><strong>South By</strong> - {doc.southBy || '(South By)'}</div>
+                    <div style={{ marginBottom: '6pt' }}><strong>East By</strong> - {doc.eastBy || '(East By)'}</div>
                     <div><strong>West By</strong> - {doc.westBy || '(West By)'}</div>
                   </td>
                 </tr>
@@ -243,24 +245,24 @@ const ReportPreview = ({
             <table style={tableStyle}>
               <tbody>
                 <tr>
-                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center', width: '50%' }}>North</td>
-                  <td style={{ ...cellStyle, textAlign: 'center' }}>{doc.northMeasurement || '(North) ft'}</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center', width: '50%', padding: '14pt 10pt' }}>North</td>
+                  <td style={{ ...cellStyle, textAlign: 'center', padding: '14pt 10pt' }}>{doc.northMeasurement || '(North) ft'}</td>
                 </tr>
                 <tr>
-                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center' }}>South</td>
-                  <td style={{ ...cellStyle, textAlign: 'center' }}>{doc.southMeasurement || '(South) ft'}</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center', padding: '14pt 10pt' }}>South</td>
+                  <td style={{ ...cellStyle, textAlign: 'center', padding: '14pt 10pt' }}>{doc.southMeasurement || '(South) ft'}</td>
                 </tr>
                 <tr>
-                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center' }}>East</td>
-                  <td style={{ ...cellStyle, textAlign: 'center' }}>{doc.eastMeasurement || '(East) ft'}</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center', padding: '14pt 10pt' }}>East</td>
+                  <td style={{ ...cellStyle, textAlign: 'center', padding: '14pt 10pt' }}>{doc.eastMeasurement || '(East) ft'}</td>
                 </tr>
                 <tr>
-                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center' }}>West</td>
-                  <td style={{ ...cellStyle, textAlign: 'center' }}>{doc.westMeasurement || '(West) ft'}</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center', padding: '14pt 10pt' }}>West</td>
+                  <td style={{ ...cellStyle, textAlign: 'center', padding: '14pt 10pt' }}>{doc.westMeasurement || '(West) ft'}</td>
                 </tr>
                 <tr>
-                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center' }}>Total</td>
-                  <td style={{ ...cellStyle, textAlign: 'center' }}>{doc.totalExtentSqFt || '(Total Extent) Sq.Ft'}</td>
+                  <td style={{ ...cellStyle, fontWeight: 'bold', textAlign: 'center', padding: '14pt 10pt' }}>Total</td>
+                  <td style={{ ...cellStyle, textAlign: 'center', padding: '14pt 10pt' }}>{doc.totalExtentSqFt || '(Total Extent) Sq.Ft'}</td>
                 </tr>
               </tbody>
             </table>
