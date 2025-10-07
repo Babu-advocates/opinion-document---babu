@@ -174,7 +174,7 @@ const ReportPreview = ({
     
     const cellStyle = {
       border: '1px solid #000',
-      padding: '6pt'
+      padding: '10pt'
     };
     
     return (
@@ -220,11 +220,11 @@ const ReportPreview = ({
                   <td style={cellStyle}>{doc.location || '(Location like name of the place, village, city registration, sub-district etc.)'}</td>
                 </tr>
                 <tr>
-                  <td style={{ ...cellStyle, padding: '8pt' }} colSpan={3}>
-                    <div style={{ fontWeight: 'bold', marginBottom: '6pt' }}>i) Boundaries for {doc.totalExtentSqFt || '(Total Extent)'} Sq.Ft of land</div>
-                    <div style={{ marginTop: '4pt' }}><strong>North By</strong> - {doc.northBy || '(North By)'}</div>
-                    <div><strong>South By</strong> - {doc.southBy || '(South By)'}</div>
-                    <div><strong>East By</strong> - {doc.eastBy || '(East By)'}</div>
+                  <td style={{ ...cellStyle, padding: '12pt' }} colSpan={3}>
+                    <div style={{ fontWeight: 'bold', marginBottom: '8pt' }}>i) Boundaries for {doc.totalExtentSqFt || '(Total Extent)'} Sq.Ft of land</div>
+                    <div style={{ marginTop: '6pt', marginBottom: '4pt' }}><strong>North By</strong> - {doc.northBy || '(North By)'}</div>
+                    <div style={{ marginBottom: '4pt' }}><strong>South By</strong> - {doc.southBy || '(South By)'}</div>
+                    <div style={{ marginBottom: '4pt' }}><strong>East By</strong> - {doc.eastBy || '(East By)'}</div>
                     <div><strong>West By</strong> - {doc.westBy || '(West By)'}</div>
                   </td>
                 </tr>
