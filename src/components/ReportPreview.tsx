@@ -174,9 +174,10 @@ const ReportPreview = ({
     
     const cellStyle = {
       border: '1px solid #000',
-      padding: '18pt 12pt',
-      minHeight: '50pt',
-      verticalAlign: 'top'
+      padding: '20pt 15pt',
+      minHeight: '60pt',
+      verticalAlign: 'top',
+      lineHeight: '1.8'
     };
     
     return (
@@ -222,12 +223,12 @@ const ReportPreview = ({
                   <td style={cellStyle}>{doc.location || '(Location like name of the place, village, city registration, sub-district etc.)'}</td>
                 </tr>
                 <tr>
-                  <td style={cellStyle} colSpan={3}>
-                    <div style={{ fontWeight: 'bold', marginBottom: '10pt' }}>i) Boundaries for {doc.totalExtentSqFt || '(Total Extent)'} Sq.Ft of land</div>
-                    <div style={{ marginBottom: '6pt' }}><strong>North By</strong> - {doc.northBy || '(North By)'}</div>
-                    <div style={{ marginBottom: '6pt' }}><strong>South By</strong> - {doc.southBy || '(South By)'}</div>
-                    <div style={{ marginBottom: '6pt' }}><strong>East By</strong> - {doc.eastBy || '(East By)'}</div>
-                    <div><strong>West By</strong> - {doc.westBy || '(West By)'}</div>
+                  <td style={{ ...cellStyle, padding: '20pt 15pt' }} colSpan={3}>
+                    <div style={{ fontWeight: 'bold', marginBottom: '12pt', fontSize: '12pt' }}>i) Boundaries for {doc.totalExtentSqFt || '(Total Extent)'} Sq.Ft of land</div>
+                    <div style={{ marginBottom: '8pt', lineHeight: '1.8' }}><strong>North By</strong> - {doc.northBy || '(North By)'}</div>
+                    <div style={{ marginBottom: '8pt', lineHeight: '1.8' }}><strong>South By</strong> - {doc.southBy || '(South By)'}</div>
+                    <div style={{ marginBottom: '8pt', lineHeight: '1.8' }}><strong>East By</strong> - {doc.eastBy || '(East By)'}</div>
+                    <div style={{ lineHeight: '1.8' }}><strong>West By</strong> - {doc.westBy || '(West By)'}</div>
                   </td>
                 </tr>
               </tbody>
@@ -237,7 +238,8 @@ const ReportPreview = ({
             <h4 style={{ 
               fontWeight: 'bold', 
               fontSize: '12pt',
-              marginBottom: '6pt',
+              marginBottom: '10pt',
+              marginTop: '6pt',
               fontFamily: 'Cambria, Georgia, serif'
             }}>
               Measurement Details
